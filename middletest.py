@@ -20,6 +20,10 @@ def count_sentence_endings(text):
     endings = re.findall(r'\.\.\.|[.!?]', text)
     return len(endings)
 
+def count_punctuation_marks(text):
+    punctuation = re.findall(r'[.,;!?()\-":\'’]', text)
+    return len(punctuation)
+
 def display_text(text):
     print("\nТекст з файлу:")
     print(text)
@@ -36,9 +40,11 @@ def analyze_text():
     word_count = count_words(text)
     sentence_count = count_sentences(text)
     ending_count = count_sentence_endings(text)
+    punctuation_count = count_punctuation_marks(text)
 
     print(f"\nКількість слів: {word_count}")
     print(f"Кількість речень: {sentence_count}")
     print(f"Кількість символів, що закінчують речення: {ending_count}")
+    print(f"Кількість розділювальних знаків: {punctuation_count}")
 
 analyze_text()
