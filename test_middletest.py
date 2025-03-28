@@ -1,7 +1,5 @@
 import pytest
-import re
-from io import StringIO
-
+from unittest.mock import patch 
 from middletest import read_file, count_words, count_sentences, count_sentence_endings, count_punctuation_marks
 
 # count_punctuation_marks
