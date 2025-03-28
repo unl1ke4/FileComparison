@@ -55,4 +55,3 @@ def analyze_text(file_path='example.txt'):
 
 
 analyze_text()
-

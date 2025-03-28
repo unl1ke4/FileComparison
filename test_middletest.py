@@ -56,4 +56,3 @@ def test_analyze_text(sample_text):
 def test_read_file(sample_text):
     with patch("builtins.open", mock_open(read_data=sample_text)):
         assert read_file("example.txt") == sample_text
-
