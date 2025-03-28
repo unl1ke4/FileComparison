@@ -33,7 +33,7 @@ def analyze_text():
     text = read_file(file_path)
     
     if text is None:
-        return  
+        return
     
     display_text(text)
 
