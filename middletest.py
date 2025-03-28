@@ -28,8 +28,7 @@ def display_text(text):
     print("\nТекст з файлу:")
     print(text)
 
-def analyze_text():
-    file_path = input("Введіть ім'я файлу (з розширенням .txt): ").strip()
+def analyze_text(file_path='example.txt'):
     text = read_file(file_path)
     
     if text is None:
