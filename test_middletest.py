@@ -12,3 +12,7 @@ from middletest import read_file, count_words, count_sentences, count_sentence_e
 ])
 def test_count_punctuation_marks(text, expected):
     assert count_punctuation_marks(text) == expected
+
+def test_analyze_text():
+    with patch('builtins.input', return_value='example.txt'):
+        analyze_text()
