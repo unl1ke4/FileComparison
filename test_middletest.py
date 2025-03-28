@@ -1,8 +1,6 @@
 import pytest
-import re
-from io import StringIO
-
-from middletest import read_file, count_words, count_sentences, count_sentence_endings, count_punctuation_marks
+from unittest.mock import patch 
+from middletest import read_file, count_words, count_sentences, count_sentence_endings, count_punctuation_marks, analyze_text
 
 # Фікстура для підготовки тексту
 @pytest.fixture
@@ -17,7 +15,7 @@ def sample_text():
 ])
 def test_count_punctuation_marks(text, expected):
     assert count_punctuation_marks(text) == expected
-    
+
 # count_sentence_endings
 @pytest.mark.parametrize("text, expected", [
     ("Привіт! Це тестовий текст.", 2),
