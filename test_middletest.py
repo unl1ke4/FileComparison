@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch 
-from middletest import read_file, count_words, count_sentences, count_sentence_endings, count_punctuation_marks
+from middletest import read_file, count_words, count_sentences, count_sentence_endings, count_punctuation_marks, analyze_text
 
 # count_punctuation_marks
 @pytest.mark.parametrize("text, expected", [
