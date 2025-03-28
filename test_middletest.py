@@ -24,3 +24,7 @@ def test_count_punctuation_marks(text, expected):
 ])
 def test_count_sentence_endings(text, expected):
     assert count_sentence_endings(text) == expected
+
+def test_analyze_text():
+    with patch('builtins.input', return_value='example.txt'):
+        analyze_text()
